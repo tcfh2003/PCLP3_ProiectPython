@@ -1,0 +1,15 @@
+Manager1
+1000
+Department1
+Manager2
+2000
+Department2
+Manager3
+3000
+Department3
+Manager4
+4000
+Department4
+Manager5
+5000
+Department5
