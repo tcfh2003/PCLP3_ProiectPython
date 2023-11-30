@@ -1,0 +1,47 @@
+Provide details for Manager 0
+Name : Salary : Department : 
+
+Provide details for Manager 1
+Name : Salary : Department : 
+
+Provide details for Manager 2
+Name : Salary : Department : 
+
+Provide details for Manager 3
+Name : Salary : Department : 
+
+Provide details for Manager 4
+Name : Salary : Department : 
+
+display_employee() din clasa Manager: 
+Name :  Marcel
+display_employee() din clasa Employee: 
+Name :  Marcel , Salary:  4000
+
+
+display_employee() din clasa Manager: 
+Name :  Ionel
+display_employee() din clasa Employee: 
+Name :  Ionel , Salary:  7000
+
+
+display_employee() din clasa Manager: 
+Name :  Costel
+display_employee() din clasa Employee: 
+Name :  Costel , Salary:  4000
+
+
+display_employee() din clasa Manager: 
+Name :  Vasile
+display_employee() din clasa Employee: 
+Name :  Vasile , Salary:  7000
+
+
+display_employee() din clasa Manager: 
+Name :  George
+display_employee() din clasa Employee: 
+Name :  George , Salary:  5000
+
+
+Pentru Manager, emp_count =  6
+Pentru Employee, emp_count =  7

@@ -1,0 +1,15 @@
+Marcel
+4000
+Marketing
+Ionel
+7000
+Research & Development
+Costel
+4000
+Human Resources
+Vasile
+7000
+DevOps
+George
+5000
+Legal
