@@ -59,9 +59,11 @@ def index():
 def entire_span_plots():
     return render_template('entire_span_plots.html', plots=plots)
 
+
 @app.route("/first_X_datapoints/")
 def first_X_datapoints():
     return render_template('first_X_datapoints.html', plots=plots)
+
 
 @app.route("/last_Y_datapoints/")
 def last_Y_datapoints():
