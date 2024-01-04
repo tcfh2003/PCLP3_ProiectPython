@@ -2,6 +2,13 @@ import numpy as np
 import matplotlib.pyplot as mplot
 
 
+
+
+
+
+
+
+
 def seconds_to_microseconds(t):
     return t * 10**6
 
