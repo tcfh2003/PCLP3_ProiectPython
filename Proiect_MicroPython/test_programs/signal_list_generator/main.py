@@ -47,18 +47,6 @@ def microseconds_to_seconds(t):
     return t * 10**(-6)
 
 
-def esp_list(np_arr):
-    np_arr = (np_arr + 1) * 127.5
-    np_arr = np_arr.astype(int)
-    for i in range(len(np_arr)):
-        if np_arr[i] > 255:
-            np_arr[i] = 255
-
-    print(np_arr.tolist())
-    print(len(np_arr))
-    return np_arr.tolist()
-
-
 Ts = microseconds_to_seconds(40)    #s
 f = 1000                            #Hz
 T = 1.0/f                           #s
