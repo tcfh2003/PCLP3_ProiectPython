@@ -21,7 +21,7 @@ class Signal:
 
 def rectangular_wave(T, Ts, duty_cycle=0.5):
     t = np.arange(0, T, Ts)
-    x_square = np.where(np.mod(t, T) < T * duty_cycle, 1, -1)
+    x_square = np.where(np.mod(t, T) < T * duty_cycle, 1, 0)
     return Signal(t, x_square)
 
 
@@ -47,7 +47,7 @@ def microseconds_to_seconds(t):
     return t * 10**(-6)
 
 
-Ts = microseconds_to_seconds(40)    #s
+Ts = microseconds_to_seconds(44)    #s
 f = 1000                            #Hz
 T = 1.0/f                           #s
 
