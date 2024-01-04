@@ -22,8 +22,8 @@ def esp_list(np_arr):
     return np_arr.tolist()
 
 
-Ts = microseconds_to_seconds(50)    #s
-f = 100                             #Hz
+Ts = microseconds_to_seconds(40)    #s
+f = 1000                            #Hz
 T = 1.0/f                           #s
 t = np.arange(0, T, Ts)
 
