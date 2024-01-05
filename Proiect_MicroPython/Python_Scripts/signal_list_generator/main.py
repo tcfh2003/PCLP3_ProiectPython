@@ -36,7 +36,7 @@ def sinusoidal_wave(T, Ts):
     return Signal(t, x_sin)
 
 
-def sawtooth(t, Ts):
+def sawtooth_wave(t, Ts):
     t = np.arange(0, T, Ts)
     x_sawtooth = np.linspace(0, 1, len(t))
     return Signal(t, x_sawtooth)
@@ -57,7 +57,7 @@ T = 1.0/f                           #s
 sinSignal = sinusoidal_wave(T, Ts)
 squareSignal = rectangular_wave(T, Ts)
 triangleSignal = triangular_wave(T, Ts)
-sawtoothSignal = sawtooth(T, Ts)
+sawtoothSignal = sawtooth_wave(T, Ts)
 
 mplot.plot(sinSignal.t, sinSignal.npArray)
 mplot.show()
