@@ -7,7 +7,6 @@ class Signal:
         self.npArray = npArray
 
     def esp_list(self):
-        #np_arr = (np_arr + 1) * 127.5
         np_arr = self.npArray * 255
         np_arr = np_arr.astype(int)
         for i in range(len(np_arr)):
@@ -37,6 +36,10 @@ def sinusoidal_wave(T, Ts):
     return Signal(t, x_sin)
 
 
+def sawtooth(t, Ts):
+    t = np.arange(0, T, Ts)
+    x_sawtooth = np.linspace(0, 1, len(t))
+    return Signal(t, x_sawtooth)
 
 
 def seconds_to_microseconds(t):
@@ -54,13 +57,24 @@ T = 1.0/f                           #s
 sinSignal = sinusoidal_wave(T, Ts)
 squareSignal = rectangular_wave(T, Ts)
 triangleSignal = triangular_wave(T, Ts)
+sawtoothSignal = sawtooth(T, Ts)
 
 mplot.plot(sinSignal.t, sinSignal.npArray)
 mplot.show()
+print("Sine wave:")
 sinSignal.esp_list()
+
 mplot.plot(squareSignal.t, squareSignal.npArray)
 mplot.show()
+print("Square wave:")
 squareSignal.esp_list()
+
 mplot.plot(triangleSignal.t, triangleSignal.npArray)
 mplot.show()
+print("Triangle wave:")
 triangleSignal.esp_list()
+
+mplot.plot(sawtoothSignal.t, sawtoothSignal.npArray)
+mplot.show()
+print("Sawtooth wave:")
+sawtoothSignal.esp_list()
