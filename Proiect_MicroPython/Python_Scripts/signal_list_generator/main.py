@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as mplot
 
+
 class Signal:
     def __init__(self, t, npArray):
         self.t = t
@@ -16,6 +17,22 @@ class Signal:
         print(np_arr.tolist())
         print(len(np_arr))
         return np_arr.tolist()
+
+    def plot_timedomain(self):
+        mplot.plot(self.t, self.npArray)
+        mplot.xlabel('t [s]')
+
+    def plot_FFT(self):
+        Ts = self.t[1] - self.t[0]
+        T = self.t[-1] + Ts
+        npArray_10periods = np.tile(self.npArray, 10)
+        fft = np.fft.fft(npArray_10periods, 2048)
+        fft = Ts/(10*T) * np.abs(fft)
+        freq = np.fft.fftfreq(2048, Ts)
+        mplot.plot(freq, fft)
+        mplot.xlabel('f [Hz]')
+        mplot.ylabel('|X(f)|')
+        mplot.xlim((-(1/T) * 7 , (1/T) * 7))    #include 7 harmonics in plot
 
 
 def rectangular_wave(T, Ts, duty_cycle=0.5):
@@ -59,22 +76,38 @@ squareSignal = rectangular_wave(T, Ts)
 triangleSignal = triangular_wave(T, Ts)
 sawtoothSignal = sawtooth_wave(T, Ts)
 
-mplot.plot(sinSignal.t, sinSignal.npArray)
+sinSignal.plot_timedomain()
+mplot.title("Sine wave")
+mplot.show()
+sinSignal.plot_FFT()
+mplot.title("FFT of sine wave")
 mplot.show()
 print("Sine wave:")
 sinSignal.esp_list()
 
-mplot.plot(squareSignal.t, squareSignal.npArray)
+squareSignal.plot_timedomain()
+mplot.title("Square wave")
+mplot.show()
+squareSignal.plot_FFT()
+mplot.title("FFT of square wave")
 mplot.show()
 print("Square wave:")
 squareSignal.esp_list()
 
-mplot.plot(triangleSignal.t, triangleSignal.npArray)
+triangleSignal.plot_timedomain()
+mplot.title("Triangle wave")
+mplot.show()
+triangleSignal.plot_FFT()
+mplot.title("FFT of triangle wave")
 mplot.show()
 print("Triangle wave:")
 triangleSignal.esp_list()
 
-mplot.plot(sawtoothSignal.t, sawtoothSignal.npArray)
+sawtoothSignal.plot_timedomain()
+mplot.title("Sawtooth wave")
+mplot.show()
+sawtoothSignal.plot_FFT()
+mplot.title("FFT of sawtooth wave")
 mplot.show()
 print("Sawtooth wave:")
 sawtoothSignal.esp_list()
