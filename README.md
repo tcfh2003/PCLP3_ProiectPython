@@ -20,4 +20,4 @@ Documentation and use instructions are in that folder in PCLP3-Proiect_Beliciu_A
 9.	Se inițializează conexiunea cu ESP32 apăsând pe butonul Connect din meniul din dreapta în uPyCraft
 10.	Se deschide în uPyCraft fișierul din repozitor /Proiect_MicroPython/Python_Scripts/sample_period.py, apoi se apasă butonul din meniul din dreapta în uPyCraft DownloadAndRun
 11.	Se determină cu ajutorul unui osciloscop perioada de eșantionare. În cazul nostru, perioada de eșantionare a fost de 44us
-12.	Se rulează programul din repozitor /Proiect_MicroPython/Python_Scripts/ signal_list_generator/main.py și se copiază listele afișate în variabilele din /Proiect_MicroPython/Python_Scripts/multiple_signals.py. Conțiuntul acestui se deschide în uPyCraft, se salvează și se apasă butonul DownloadAndRun
+12.	Se rulează programul din repozitor /Proiect_MicroPython/Python_Scripts/ signal_list_generator/main.py și se copiază listele afișate în variabilele din /Proiect_MicroPython/Python_Scripts/multiple_signals.py. Fișierul acesta se deschide în uPyCraft, se salvează și se apasă butonul DownloadAndRun
