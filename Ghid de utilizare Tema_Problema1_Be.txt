@@ -1,0 +1,2 @@
+Ghid de utilizare Tema_Problema1_Beliciu_Andrei.py
+Pentru a furniza o intrare personalizată programului, rulați folosind Python 3.11 fișierul Tema_Problema1_Beliciu_Andrei.py. 
