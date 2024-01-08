@@ -1,0 +1,2 @@
+Ghid de utilizare Tema_Problema2_Beliciu_Andrei.py
+Mai întâi, creați un mediu virtual folosind fie python3 -m venv venv, fie instalând virtualenv folosind pip install virtualenv și apoi virtualenv venv, apoi instalați toate pachetele "pandas" și "matplotlib.pyplot" . Apoi, rulați fișierul Tema_Problema2_Beliciu_Andrei.py folosind Python 3.11.
